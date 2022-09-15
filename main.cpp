@@ -31,7 +31,7 @@ int main(int argc, char* argv[]) {
     end = std::chrono::system_clock::now();
     auto elapsed_micro = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
     std::cout << "Elapsed time: " << elapsed_micro.count()/1000.0l << "ms\n";
-    const char* output_name = argc > 2 ? argv[2] : "test_outputs";
+    const char* output_name = argc > 2 ? argv[2] : "test_outputs.txt";
     
     save_output(algorithm_result, output_name);
     return 0;
